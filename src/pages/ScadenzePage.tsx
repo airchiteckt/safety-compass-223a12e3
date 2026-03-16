@@ -4,7 +4,7 @@ import { scadenze, tipoScadenzaLabels } from "@/data/mock";
 import { useState } from "react";
 
 type FilterStatus = "tutti" | "ok" | "in_scadenza" | "scaduto";
-type FilterTipo = "tutti" | "formazione" | "visita_medica" | "documento" | "verifica_impianto";
+type FilterTipo = "tutti" | "formazione" | "visita_medica" | "documento" | "verifica_impianto" | "ambiente";
 
 export default function ScadenzePage() {
   const [filterStatus, setFilterStatus] = useState<FilterStatus>("tutti");

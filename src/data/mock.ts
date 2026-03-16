@@ -305,3 +305,37 @@ export const tipoScadenzaLabels: Record<string, string> = {
   verifica_impianto: "Verifica Impianto",
   ambiente: "Ambiente",
 };
+
+export const praticheAmbientali: PraticaAmbientale[] = [
+  // Autorizzazioni
+  { id: "a1", categoria: "autorizzazioni", elemento: "AUA – Autorizzazione Unica Ambientale", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Prot. AUA-2022-456", normativa: "D.P.R. 59/2013", dataEmissione: "2022-05-15", scadenza: "2037-05-15", enteCompetente: "Provincia di Brescia", status: "ok" },
+  { id: "a2", categoria: "autorizzazioni", elemento: "AIA – Autorizzazione Integrata Ambientale", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Prot. AIA-2020-112", normativa: "D.Lgs. 152/2006 Parte II", dataEmissione: "2020-03-10", scadenza: "2026-03-10", enteCompetente: "Regione Lombardia", status: "in_scadenza" },
+  { id: "a3", categoria: "autorizzazioni", elemento: "AUA – Autorizzazione Unica Ambientale", azienda: "Alimentari Sole S.r.l.", aziendaId: "4", riferimento: "Prot. AUA-2019-789", normativa: "D.P.R. 59/2013", dataEmissione: "2019-09-01", scadenza: "2034-09-01", enteCompetente: "Provincia di Bologna", status: "ok" },
+  { id: "a4", categoria: "autorizzazioni", elemento: "Autorizzazione scarichi industriali", azienda: "Alimentari Sole S.r.l.", aziendaId: "4", riferimento: "Det. 2021-345", normativa: "D.Lgs. 152/2006 Parte III", dataEmissione: "2021-06-15", scadenza: "2025-06-15", enteCompetente: "Provincia di Bologna", status: "scaduto" },
+
+  // Emissioni in atmosfera
+  { id: "e1", categoria: "emissioni", elemento: "Analisi emissioni – Camino E1", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Punto emissione E1 – Verniciatura", normativa: "D.Lgs. 152/2006 Parte V", dataEmissione: "2025-03-15", scadenza: "2026-03-15", enteCompetente: "ARPA Lombardia", status: "in_scadenza" },
+  { id: "e2", categoria: "emissioni", elemento: "Analisi emissioni – Camino E2", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Punto emissione E2 – Saldatura", normativa: "D.Lgs. 152/2006 Parte V", dataEmissione: "2024-10-15", scadenza: "2025-10-15", enteCompetente: "ARPA Lombardia", status: "scaduto" },
+  { id: "e3", categoria: "emissioni", elemento: "Analisi emissioni – Forno", azienda: "Alimentari Sole S.r.l.", aziendaId: "4", riferimento: "Punto emissione E1 – Cottura", normativa: "D.Lgs. 152/2006 Parte V", dataEmissione: "2025-06-01", scadenza: "2026-06-01", enteCompetente: "ARPA Emilia-Romagna", status: "ok" },
+
+  // Scarichi idrici
+  { id: "s1", categoria: "scarichi", elemento: "Analisi scarico – Punto S1", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Scarico in fognatura – Processo", normativa: "D.Lgs. 152/2006 Parte III", dataEmissione: "2025-04-01", scadenza: "2026-04-01", enteCompetente: "Gestore fognatura", status: "in_scadenza" },
+  { id: "s2", categoria: "scarichi", elemento: "Analisi scarico – Punto S1", azienda: "Alimentari Sole S.r.l.", aziendaId: "4", riferimento: "Scarico in fognatura – Lavaggio", normativa: "D.Lgs. 152/2006 Parte III", dataEmissione: "2025-01-15", scadenza: "2026-01-15", enteCompetente: "HERA S.p.A.", status: "ok" },
+  { id: "s3", categoria: "scarichi", elemento: "Manutenzione impianto depurazione", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Impianto chimico-fisico", normativa: "D.Lgs. 152/2006", dataEmissione: "2024-12-01", scadenza: "2025-06-01", enteCompetente: "Tecnico abilitato", status: "scaduto" },
+
+  // Gestione rifiuti
+  { id: "r1", categoria: "rifiuti", elemento: "MUD – Dichiarazione annuale rifiuti", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Anno 2025", normativa: "L. 70/1994", dataEmissione: "2025-04-30", scadenza: "2026-04-30", enteCompetente: "Camera di Commercio", status: "in_scadenza" },
+  { id: "r2", categoria: "rifiuti", elemento: "MUD – Dichiarazione annuale rifiuti", azienda: "Alimentari Sole S.r.l.", aziendaId: "4", riferimento: "Anno 2025", normativa: "L. 70/1994", dataEmissione: "2025-04-30", scadenza: "2026-04-30", enteCompetente: "Camera di Commercio", status: "in_scadenza" },
+  { id: "r3", categoria: "rifiuti", elemento: "Registro carico/scarico rifiuti", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Registro vidimato", normativa: "D.Lgs. 152/2006 Art. 190", dataEmissione: "2024-01-01", scadenza: "2025-12-31", enteCompetente: "Camera di Commercio", status: "ok" },
+  { id: "r4", categoria: "rifiuti", elemento: "Registro carico/scarico rifiuti", azienda: "Alimentari Sole S.r.l.", aziendaId: "4", riferimento: "Registro vidimato", normativa: "D.Lgs. 152/2006 Art. 190", dataEmissione: "2024-01-01", scadenza: "2025-07-01", enteCompetente: "Camera di Commercio", status: "scaduto" },
+  { id: "r5", categoria: "rifiuti", elemento: "Iscrizione Albo Gestori Ambientali", azienda: "Logistica Rapida S.r.l.", aziendaId: "5", riferimento: "Cat. 4 Classe F", normativa: "D.Lgs. 152/2006 Art. 212", dataEmissione: "2021-09-01", scadenza: "2026-09-01", enteCompetente: "Albo Nazionale", status: "ok" },
+
+  // Bonifiche e amianto
+  { id: "b1", categoria: "bonifiche", elemento: "Piano di monitoraggio amianto", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Copertura capannone B", normativa: "D.M. 06/09/1994", dataEmissione: "2025-01-15", scadenza: "2026-01-15", enteCompetente: "ASL Brescia", status: "ok" },
+  { id: "b2", categoria: "bonifiche", elemento: "Restamping copertura amianto", azienda: "Alimentari Sole S.r.l.", aziendaId: "4", riferimento: "Magazzino 2", normativa: "L. 257/1992", dataEmissione: "2023-06-01", scadenza: "2025-06-01", enteCompetente: "ASL Bologna", status: "scaduto", note: "Intervento di bonifica programmato" },
+
+  // Rumore ambientale
+  { id: "n1", categoria: "rumore_ambiente", elemento: "Valutazione impatto acustico", azienda: "TechnoMetal S.p.A.", aziendaId: "2", riferimento: "Relazione tecnica", normativa: "L. 447/1995", dataEmissione: "2024-03-01", scadenza: "2027-03-01", enteCompetente: "Comune di Brescia", status: "ok" },
+  { id: "n2", categoria: "rumore_ambiente", elemento: "Valutazione impatto acustico", azienda: "Alimentari Sole S.r.l.", aziendaId: "4", riferimento: "Relazione tecnica", normativa: "L. 447/1995", dataEmissione: "2022-11-01", scadenza: "2025-11-01", enteCompetente: "Comune di Bologna", status: "in_scadenza" },
+];
+

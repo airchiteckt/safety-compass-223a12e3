@@ -16,6 +16,7 @@ import VisiteMedichePage from "./pages/VisiteMedichePage";
 import VerifichePage from "./pages/VerifichePage";
 import DocumentiPage from "./pages/DocumentiPage";
 import CRMPage from "./pages/CRMPage";
+import AmbientePage from "./pages/AmbientePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

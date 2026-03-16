@@ -68,8 +68,7 @@ export default function Aziende() {
                       <div>
                         <p className="font-medium text-foreground">{a.ragioneSociale}</p>
                         <p className="text-xs text-muted-foreground">{a.indirizzo}</p>
-                      </div>
-                    </div>
+                    </Link>
                   </td>
                   <td className="px-4 py-3 font-mono text-xs text-muted-foreground">{a.piva}</td>
                   <td className="px-4 py-3">

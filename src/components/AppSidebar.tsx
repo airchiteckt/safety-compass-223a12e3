@@ -14,6 +14,7 @@ import {
   Briefcase,
   Shield,
   ChevronDown,
+  Leaf,
 } from "lucide-react";
 import { useState } from "react";
 

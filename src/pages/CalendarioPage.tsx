@@ -1,6 +1,6 @@
 import { AppLayout } from "@/components/AppLayout";
 import { StatusBadge } from "@/components/StatusBadge";
-import { scadenze, tipoScadenzaLabels } from "@/data/mock";
+import { scadenze, aziende, tipoScadenzaLabels } from "@/data/mock";
 import { useState, useMemo } from "react";
 import { ChevronLeft, ChevronRight, CalendarClock, GraduationCap, Stethoscope, FileText, Wrench, Leaf } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -41,6 +41,7 @@ export default function CalendarioPage() {
   const [year, setYear] = useState(today.getFullYear());
   const [month, setMonth] = useState(today.getMonth());
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [filterAzienda, setFilterAzienda] = useState<string>("tutte");
 
   const prevMonth = () => {
     if (month === 0) { setMonth(11); setYear(year - 1); }
@@ -58,16 +59,21 @@ export default function CalendarioPage() {
     setSelectedDate(null);
   };
 
+  const filteredScadenze = useMemo(() => {
+    if (filterAzienda === "tutte") return scadenze;
+    return scadenze.filter((s) => s.azienda === filterAzienda);
+  }, [filterAzienda]);
+
   // Group scadenze by date
   const scadenzeByDate = useMemo(() => {
     const map: Record<string, typeof scadenze> = {};
-    scadenze.forEach((s) => {
-      const d = s.scadenza; // "YYYY-MM-DD"
+    filteredScadenze.forEach((s) => {
+      const d = s.scadenza;
       if (!map[d]) map[d] = [];
       map[d].push(s);
     });
     return map;
-  }, []);
+  }, [filteredScadenze]);
 
   const daysInMonth = getDaysInMonth(year, month);
   const firstDay = getFirstDayOfMonth(year, month);
@@ -89,19 +95,31 @@ export default function CalendarioPage() {
   // Monthly stats
   const monthScadenze = useMemo(() => {
     const prefix = `${year}-${String(month + 1).padStart(2, "0")}`;
-    return scadenze.filter((s) => s.scadenza.startsWith(prefix));
-  }, [year, month]);
+    return filteredScadenze.filter((s) => s.scadenza.startsWith(prefix));
+  }, [year, month, filteredScadenze]);
 
   const monthScadute = monthScadenze.filter((s) => s.status === "scaduto").length;
   const monthInScadenza = monthScadenze.filter((s) => s.status === "in_scadenza").length;
 
   return (
     <AppLayout>
-      <div className="mb-6">
-        <h1 className="font-display text-2xl font-bold text-foreground">Calendario Operativo</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Pianificazione scadenze sicurezza e ambiente
-        </p>
+      <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h1 className="font-display text-2xl font-bold text-foreground">Calendario Operativo</h1>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Pianificazione scadenze sicurezza e ambiente
+          </p>
+        </div>
+        <select
+          value={filterAzienda}
+          onChange={(e) => setFilterAzienda(e.target.value)}
+          className="rounded-lg border border-input bg-card px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        >
+          <option value="tutte">Tutte le aziende</option>
+          {aziende.map((a) => (
+            <option key={a.id} value={a.ragioneSociale}>{a.ragioneSociale}</option>
+          ))}
+        </select>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_340px]">

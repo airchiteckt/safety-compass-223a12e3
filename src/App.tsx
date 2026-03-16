@@ -25,6 +25,7 @@ const App = () => (
           <Route path="/dipendenti" element={<Dipendenti />} />
           <Route path="/scadenze" element={<ScadenzePage />} />
           <Route path="/attrezzature" element={<AttrezzaturePage />} />
+          <Route path="/calendario" element={<CalendarioPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

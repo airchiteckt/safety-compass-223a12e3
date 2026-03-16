@@ -251,6 +251,17 @@ export const scadenze: Scadenza[] = [
   { id: "15", tipo: "ambiente", elemento: "Registro carico/scarico rifiuti", azienda: "Alimentari Sole S.r.l.", riferimento: "Registro aziendale", scadenza: "2025-07-01", status: "scaduto" },
   { id: "16", tipo: "ambiente", elemento: "Analisi emissioni in atmosfera", azienda: "TechnoMetal S.p.A.", riferimento: "Camino E1", scadenza: "2025-10-15", status: "scaduto" },
   { id: "17", tipo: "ambiente", elemento: "Analisi scarichi idrici", azienda: "Alimentari Sole S.r.l.", riferimento: "Punto scarico S1", scadenza: "2026-08-01", status: "ok" },
+  // Marzo 2026
+  { id: "18", tipo: "formazione", elemento: "Corso antincendio", azienda: "Rossi Costruzioni S.r.l.", riferimento: "Mario Rossi + 4 operai", scadenza: "2026-03-12", status: "in_scadenza" },
+  { id: "19", tipo: "visita_medica", elemento: "Visita periodica", azienda: "Rossi Costruzioni S.r.l.", riferimento: "Giulia Bianchi", scadenza: "2026-03-12", status: "ok" },
+  { id: "20", tipo: "formazione", elemento: "Aggiornamento carrellista", azienda: "TechnoMetal S.p.A.", riferimento: "Luca Verdi", scadenza: "2026-03-18", status: "in_scadenza" },
+  { id: "21", tipo: "verifica_impianto", elemento: "Verifica messa a terra", azienda: "TechnoMetal S.p.A.", riferimento: "Matricola MT-2020-002", scadenza: "2026-03-20", status: "ok" },
+  { id: "22", tipo: "documento", elemento: "Aggiornamento DVR", azienda: "Logistica Rapida S.r.l.", riferimento: "Documento aziendale", scadenza: "2026-03-25", status: "in_scadenza" },
+  { id: "23", tipo: "ambiente", elemento: "Analisi acque reflue", azienda: "Alimentari Sole S.r.l.", riferimento: "Punto scarico S2", scadenza: "2026-03-28", status: "scaduto" },
+  { id: "24", tipo: "visita_medica", elemento: "Visita preventiva", azienda: "TechnoMetal S.p.A.", riferimento: "Nuovo assunto – Marco Galli", scadenza: "2026-03-05", status: "ok" },
+  { id: "25", tipo: "formazione", elemento: "Sicurezza base", azienda: "Green Office S.r.l.", riferimento: "Sara Neri", scadenza: "2026-03-10", status: "ok" },
+  { id: "26", tipo: "ambiente", elemento: "Registro rifiuti – aggiornamento", azienda: "TechnoMetal S.p.A.", riferimento: "Registro aziendale", scadenza: "2026-03-31", status: "in_scadenza" },
+  { id: "27", tipo: "verifica_impianto", elemento: "Revisione estintori", azienda: "Rossi Costruzioni S.r.l.", riferimento: "Matricola EX-2021-008", scadenza: "2026-03-15", status: "ok" },
 ];
 
 export const attrezzature: Attrezzatura[] = [

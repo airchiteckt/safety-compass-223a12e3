@@ -1,8 +1,7 @@
 import { AppLayout } from "@/components/AppLayout";
-import { ComplianceGauge } from "@/components/ComplianceGauge";
 import { StatusBadge } from "@/components/StatusBadge";
-import { aziende, scadenze, dipendenti, tipoScadenzaLabels } from "@/data/mock";
-import { Building2, AlertTriangle, CalendarClock, GraduationCap, Stethoscope, Users } from "lucide-react";
+import { aziende, scadenze, tipoScadenzaLabels } from "@/data/mock";
+import { Building2, AlertTriangle, CalendarClock, GraduationCap, Stethoscope, Leaf } from "lucide-react";
 
 function KPICard({ icon: Icon, label, value, accent }: { icon: typeof Building2; label: string; value: string | number; accent?: string }) {
   return (

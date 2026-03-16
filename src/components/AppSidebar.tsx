@@ -55,6 +55,12 @@ const navGroups: NavGroup[] = [
     ],
   },
   {
+    title: "Ambiente",
+    items: [
+      { label: "Sicurezza Ambientale", href: "/ambiente", icon: Leaf },
+    ],
+  },
+  {
     title: "Documenti",
     items: [
       { label: "Archivio", href: "/documenti", icon: FileText },

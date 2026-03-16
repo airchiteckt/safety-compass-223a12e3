@@ -14,6 +14,7 @@ import {
   Briefcase,
   Shield,
   ChevronDown,
+  Leaf,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -51,6 +52,12 @@ const navGroups: NavGroup[] = [
       { label: "Formazione", href: "/formazione", icon: GraduationCap },
       { label: "Visite Mediche", href: "/visite-mediche", icon: Stethoscope },
       { label: "Verifiche Impianti", href: "/verifiche", icon: ClipboardCheck },
+    ],
+  },
+  {
+    title: "Ambiente",
+    items: [
+      { label: "Sicurezza Ambientale", href: "/ambiente", icon: Leaf },
     ],
   },
   {

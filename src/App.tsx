@@ -16,6 +16,7 @@ import VisiteMedichePage from "./pages/VisiteMedichePage";
 import VerifichePage from "./pages/VerifichePage";
 import DocumentiPage from "./pages/DocumentiPage";
 import CRMPage from "./pages/CRMPage";
+import AmbientePage from "./pages/AmbientePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/visite-mediche" element={<VisiteMedichePage />} />
           <Route path="/verifiche" element={<VerifichePage />} />
           <Route path="/documenti" element={<DocumentiPage />} />
+          <Route path="/ambiente" element={<AmbientePage />} />
           <Route path="/crm" element={<CRMPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

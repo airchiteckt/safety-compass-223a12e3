@@ -103,11 +103,23 @@ export default function CalendarioPage() {
 
   return (
     <AppLayout>
-      <div className="mb-6">
-        <h1 className="font-display text-2xl font-bold text-foreground">Calendario Operativo</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Pianificazione scadenze sicurezza e ambiente
-        </p>
+      <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h1 className="font-display text-2xl font-bold text-foreground">Calendario Operativo</h1>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Pianificazione scadenze sicurezza e ambiente
+          </p>
+        </div>
+        <select
+          value={filterAzienda}
+          onChange={(e) => setFilterAzienda(e.target.value)}
+          className="rounded-lg border border-input bg-card px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        >
+          <option value="tutte">Tutte le aziende</option>
+          {aziende.map((a) => (
+            <option key={a.id} value={a.ragioneSociale}>{a.ragioneSociale}</option>
+          ))}
+        </select>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_340px]">

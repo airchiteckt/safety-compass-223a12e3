@@ -1,6 +1,6 @@
 import { AppLayout } from "@/components/AppLayout";
 import { StatusBadge } from "@/components/StatusBadge";
-import { scadenze, tipoScadenzaLabels } from "@/data/mock";
+import { scadenze, aziende, tipoScadenzaLabels } from "@/data/mock";
 import { useState, useMemo } from "react";
 import { ChevronLeft, ChevronRight, CalendarClock, GraduationCap, Stethoscope, FileText, Wrench, Leaf } from "lucide-react";
 import { cn } from "@/lib/utils";

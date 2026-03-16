@@ -54,6 +54,32 @@ export interface Attrezzatura {
   status: "ok" | "in_scadenza" | "scaduto";
 }
 
+export type CategoriaAmbientale = "autorizzazioni" | "emissioni" | "scarichi" | "rifiuti" | "bonifiche" | "rumore_ambiente";
+
+export interface PraticaAmbientale {
+  id: string;
+  categoria: CategoriaAmbientale;
+  elemento: string;
+  azienda: string;
+  aziendaId: string;
+  riferimento: string;
+  normativa: string;
+  dataEmissione: string;
+  scadenza: string;
+  enteCompetente: string;
+  status: "ok" | "in_scadenza" | "scaduto";
+  note?: string;
+}
+
+export const categoriaAmbientaleLabels: Record<CategoriaAmbientale, string> = {
+  autorizzazioni: "Autorizzazioni",
+  emissioni: "Emissioni in Atmosfera",
+  scarichi: "Scarichi Idrici",
+  rifiuti: "Gestione Rifiuti",
+  bonifiche: "Bonifiche e Amianto",
+  rumore_ambiente: "Rumore Ambientale",
+};
+
 export const aziende: Azienda[] = [
   {
     id: "1",

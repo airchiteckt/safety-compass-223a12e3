@@ -59,16 +59,21 @@ export default function CalendarioPage() {
     setSelectedDate(null);
   };
 
+  const filteredScadenze = useMemo(() => {
+    if (filterAzienda === "tutte") return scadenze;
+    return scadenze.filter((s) => s.azienda === filterAzienda);
+  }, [filterAzienda]);
+
   // Group scadenze by date
   const scadenzeByDate = useMemo(() => {
     const map: Record<string, typeof scadenze> = {};
-    scadenze.forEach((s) => {
-      const d = s.scadenza; // "YYYY-MM-DD"
+    filteredScadenze.forEach((s) => {
+      const d = s.scadenza;
       if (!map[d]) map[d] = [];
       map[d].push(s);
     });
     return map;
-  }, []);
+  }, [filteredScadenze]);
 
   const daysInMonth = getDaysInMonth(year, month);
   const firstDay = getFirstDayOfMonth(year, month);

@@ -33,7 +33,7 @@ export interface Dipendente {
 
 export interface Scadenza {
   id: string;
-  tipo: "formazione" | "visita_medica" | "documento" | "verifica_impianto";
+  tipo: "formazione" | "visita_medica" | "documento" | "verifica_impianto" | "ambiente";
   elemento: string;
   azienda: string;
   riferimento: string;
@@ -246,6 +246,11 @@ export const scadenze: Scadenza[] = [
   { id: "10", tipo: "visita_medica", elemento: "Visita periodica", azienda: "Logistica Rapida S.r.l.", riferimento: "Andrea Colombo", scadenza: "2025-03-01", status: "scaduto" },
   { id: "11", tipo: "verifica_impianto", elemento: "Estintori", azienda: "Green Office S.r.l.", riferimento: "Matricola EX-2020-015", scadenza: "2026-11-20", status: "ok" },
   { id: "12", tipo: "documento", elemento: "DUVRI", azienda: "Rossi Costruzioni S.r.l.", riferimento: "Documento aziendale", scadenza: "2026-12-01", status: "ok" },
+  { id: "13", tipo: "ambiente", elemento: "AUA – Autorizzazione Unica Ambientale", azienda: "TechnoMetal S.p.A.", riferimento: "Prot. AUA-2022-456", scadenza: "2026-05-15", status: "in_scadenza" },
+  { id: "14", tipo: "ambiente", elemento: "MUD – Dichiarazione rifiuti", azienda: "TechnoMetal S.p.A.", riferimento: "Dichiarazione annuale", scadenza: "2026-04-30", status: "in_scadenza" },
+  { id: "15", tipo: "ambiente", elemento: "Registro carico/scarico rifiuti", azienda: "Alimentari Sole S.r.l.", riferimento: "Registro aziendale", scadenza: "2025-07-01", status: "scaduto" },
+  { id: "16", tipo: "ambiente", elemento: "Analisi emissioni in atmosfera", azienda: "TechnoMetal S.p.A.", riferimento: "Camino E1", scadenza: "2025-10-15", status: "scaduto" },
+  { id: "17", tipo: "ambiente", elemento: "Analisi scarichi idrici", azienda: "Alimentari Sole S.r.l.", riferimento: "Punto scarico S1", scadenza: "2026-08-01", status: "ok" },
 ];
 
 export const attrezzature: Attrezzatura[] = [
@@ -261,4 +266,5 @@ export const tipoScadenzaLabels: Record<string, string> = {
   visita_medica: "Visita Medica",
   documento: "Documento",
   verifica_impianto: "Verifica Impianto",
+  ambiente: "Ambiente",
 };

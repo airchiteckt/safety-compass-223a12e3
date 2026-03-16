@@ -3,6 +3,8 @@ import { StatusBadge } from "@/components/StatusBadge";
 import { aziende } from "@/data/mock";
 import { Building2, Search } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const rischioColors = {
   basso: "bg-success/10 text-success",

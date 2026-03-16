@@ -23,20 +23,15 @@ export default function Dashboard() {
   const scaduteCount = scadenze.filter((s) => s.status === "scaduto").length;
   const inScadenzaCount = scadenze.filter((s) => s.status === "in_scadenza").length;
   const aziendeConProblemi = aziende.filter((a) => a.status !== "ok").length;
-  const avgCompliance = Math.round(aziende.reduce((sum, a) => sum + a.complianceScore, 0) / aziende.length);
   const corsiDaPianificare = scadenze.filter((s) => s.tipo === "formazione" && s.status !== "ok").length;
   const visiteDaPianificare = scadenze.filter((s) => s.tipo === "visita_medica" && s.status !== "ok").length;
+  const scadenzeAmbientali = scadenze.filter((s) => s.tipo === "ambiente" && s.status !== "ok").length;
 
   return (
     <AppLayout>
-      <div className="mb-8 flex items-start justify-between">
-        <div>
-          <h1 className="font-display text-2xl font-bold text-foreground">Dashboard</h1>
-          <p className="mt-1 text-sm text-muted-foreground">Panoramica generale sicurezza e compliance</p>
-        </div>
-        <div className="relative">
-          <ComplianceGauge score={avgCompliance} />
-        </div>
+      <div className="mb-8">
+        <h1 className="font-display text-2xl font-bold text-foreground">Dashboard</h1>
+        <p className="mt-1 text-sm text-muted-foreground">Panoramica generale sicurezza sul lavoro e compliance ambientale</p>
       </div>
 
       {/* KPI Grid */}
@@ -46,7 +41,7 @@ export default function Dashboard() {
         <KPICard icon={CalendarClock} label="Scadenze urgenti" value={scaduteCount} accent="bg-danger/10 text-danger" />
         <KPICard icon={CalendarClock} label="In scadenza" value={inScadenzaCount} accent="bg-warning/10 text-warning" />
         <KPICard icon={GraduationCap} label="Corsi da pianificare" value={corsiDaPianificare} accent="bg-warning/10 text-warning" />
-        <KPICard icon={Stethoscope} label="Visite da pianificare" value={visiteDaPianificare} accent="bg-warning/10 text-warning" />
+        <KPICard icon={Leaf} label="Ambiente: criticità" value={scadenzeAmbientali} accent="bg-warning/10 text-warning" />
       </div>
 
       {/* Tables */}

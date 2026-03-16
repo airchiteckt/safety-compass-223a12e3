@@ -33,7 +33,7 @@ export interface Dipendente {
 
 export interface Scadenza {
   id: string;
-  tipo: "formazione" | "visita_medica" | "documento" | "verifica_impianto";
+  tipo: "formazione" | "visita_medica" | "documento" | "verifica_impianto" | "ambiente";
   elemento: string;
   azienda: string;
   riferimento: string;

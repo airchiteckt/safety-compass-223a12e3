@@ -95,8 +95,8 @@ export default function CalendarioPage() {
   // Monthly stats
   const monthScadenze = useMemo(() => {
     const prefix = `${year}-${String(month + 1).padStart(2, "0")}`;
-    return scadenze.filter((s) => s.scadenza.startsWith(prefix));
-  }, [year, month]);
+    return filteredScadenze.filter((s) => s.scadenza.startsWith(prefix));
+  }, [year, month, filteredScadenze]);
 
   const monthScadute = monthScadenze.filter((s) => s.status === "scaduto").length;
   const monthInScadenza = monthScadenze.filter((s) => s.status === "in_scadenza").length;

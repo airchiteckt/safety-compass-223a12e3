@@ -41,6 +41,7 @@ export default function CalendarioPage() {
   const [year, setYear] = useState(today.getFullYear());
   const [month, setMonth] = useState(today.getMonth());
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [filterAzienda, setFilterAzienda] = useState<string>("tutte");
 
   const prevMonth = () => {
     if (month === 0) { setMonth(11); setYear(year - 1); }

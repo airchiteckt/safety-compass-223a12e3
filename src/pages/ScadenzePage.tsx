@@ -29,6 +29,7 @@ export default function ScadenzePage() {
     { value: "visita_medica", label: "Visite Mediche" },
     { value: "documento", label: "Documenti" },
     { value: "verifica_impianto", label: "Verifiche Impianti" },
+    { value: "ambiente", label: "Ambiente" },
   ];
 
   return (

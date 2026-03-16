@@ -266,4 +266,5 @@ export const tipoScadenzaLabels: Record<string, string> = {
   visita_medica: "Visita Medica",
   documento: "Documento",
   verifica_impianto: "Verifica Impianto",
+  ambiente: "Ambiente",
 };

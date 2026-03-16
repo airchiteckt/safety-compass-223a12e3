@@ -59,9 +59,9 @@ export default function Aziende() {
             </thead>
             <tbody>
               {filtered.map((a) => (
-                <tr key={a.id} className="border-b border-border last:border-0 hover:bg-muted/30 transition-colors duration-150 cursor-pointer">
+                <tr key={a.id} className="border-b border-border last:border-0 hover:bg-muted/30 transition-colors duration-150 cursor-pointer" onClick={() => {}}>
                   <td className="px-4 py-3">
-                    <div className="flex items-center gap-3">
+                    <Link to={`/aziende/${a.id}`} className="flex items-center gap-3">
                       <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10">
                         <Building2 className="h-4 w-4 text-primary" />
                       </div>

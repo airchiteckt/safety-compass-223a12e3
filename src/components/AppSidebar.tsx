@@ -15,6 +15,7 @@ import {
   Shield,
   ChevronDown,
   Leaf,
+  BarChart3,
 } from "lucide-react";
 import { useState } from "react";
 

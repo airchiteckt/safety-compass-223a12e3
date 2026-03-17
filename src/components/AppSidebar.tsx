@@ -15,6 +15,7 @@ import {
   Shield,
   ChevronDown,
   Leaf,
+  BarChart3,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -64,6 +65,12 @@ const navGroups: NavGroup[] = [
     title: "Documenti",
     items: [
       { label: "Archivio", href: "/documenti", icon: FileText },
+    ],
+  },
+  {
+    title: "Report",
+    items: [
+      { label: "Report & Export", href: "/report", icon: BarChart3 },
     ],
   },
   {

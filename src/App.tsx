@@ -43,6 +43,7 @@ const App = () => (
           <Route path="/documenti" element={<DocumentiPage />} />
           <Route path="/ambiente" element={<AmbientePage />} />
           <Route path="/crm" element={<CRMPage />} />
+          <Route path="/report" element={<ReportPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

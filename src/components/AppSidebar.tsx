@@ -68,6 +68,12 @@ const navGroups: NavGroup[] = [
     ],
   },
   {
+    title: "Report",
+    items: [
+      { label: "Report & Export", href: "/report", icon: BarChart3 },
+    ],
+  },
+  {
     title: "Commerciale",
     items: [
       { label: "CRM", href: "/crm", icon: Briefcase },

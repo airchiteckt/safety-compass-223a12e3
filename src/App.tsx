@@ -18,6 +18,7 @@ import DocumentiPage from "./pages/DocumentiPage";
 import CRMPage from "./pages/CRMPage";
 import AmbientePage from "./pages/AmbientePage";
 import ReportPage from "./pages/ReportPage";
+import FunzionalitaPage from "./pages/FunzionalitaPage";
 import CFTDashboard from "./pages/CFTDashboard";
 import CFTAffiliatoDettaglio from "./pages/CFTAffiliatoDettaglio";
 import NotFound from "./pages/NotFound";
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/ambiente" element={<AmbientePage />} />
           <Route path="/crm" element={<CRMPage />} />
           <Route path="/report" element={<ReportPage />} />
+          <Route path="/funzionalita" element={<FunzionalitaPage />} />
           <Route path="/cft" element={<CFTDashboard />} />
           <Route path="/cft/affiliati" element={<CFTDashboard />} />
           <Route path="/cft/affiliati/:id" element={<CFTAffiliatoDettaglio />} />

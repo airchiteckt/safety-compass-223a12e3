@@ -16,6 +16,7 @@ import {
   ChevronDown,
   Leaf,
   BarChart3,
+  Globe,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -147,6 +148,17 @@ export function AppSidebar() {
           </div>
         ))}
       </nav>
+
+      {/* CFT Link */}
+      <div className="border-t border-sidebar-border px-4 py-3">
+        <Link
+          to="/cft"
+          className="flex items-center gap-2 rounded-md px-3 py-2 text-xs font-medium text-sidebar-muted hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors"
+        >
+          <Globe className="h-3.5 w-3.5" />
+          Pannello CFT
+        </Link>
+      </div>
 
       {/* Footer */}
       <div className="border-t border-sidebar-border px-6 py-4">

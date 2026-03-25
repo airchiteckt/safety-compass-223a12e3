@@ -71,6 +71,52 @@ export default function FunzionalitaPage() {
         </p>
       </div>
 
+      {/* Executive Summary */}
+      <div className="mb-8 rounded-lg border border-border bg-card p-6 shadow-sm">
+        <h2 className="font-display text-lg font-bold text-foreground mb-4">Executive Summary</h2>
+        <p className="text-sm leading-relaxed text-muted-foreground mb-4">
+          Pegaso ERP & SGSL è la soluzione integrata per la <strong className="text-foreground">gestione centralizzata della sicurezza sul lavoro</strong>, progettata per società di consulenza, RSPP esterni e centri di formazione. La piattaforma consente di digitalizzare e automatizzare tutti gli adempimenti previsti dal D.Lgs. 81/08, eliminando fogli di calcolo, scadenze dimenticate e documenti dispersi.
+        </p>
+
+        <div className="grid gap-4 sm:grid-cols-3 mb-4">
+          <div className="rounded-lg bg-primary/5 border border-primary/10 p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <Globe className="h-4 w-4 text-primary" />
+              <h3 className="text-sm font-semibold text-foreground">CFT — Centro Federato</h3>
+            </div>
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              Livello master della piattaforma. Supervisiona tutti gli affiliati, monitora KPI aggregati, gestisce abbonamenti e controlla gli accessi multi-livello.
+            </p>
+          </div>
+          <div className="rounded-lg bg-primary/5 border border-primary/10 p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <Building2 className="h-4 w-4 text-primary" />
+              <h3 className="text-sm font-semibold text-foreground">Affiliati — Consulenti</h3>
+            </div>
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              Società di consulenza (es. Pegaso S.r.l.) che utilizzano i 13 moduli ERP & SGSL per gestire la sicurezza e la compliance di tutte le aziende clienti a loro assegnate.
+            </p>
+          </div>
+          <div className="rounded-lg bg-primary/5 border border-primary/10 p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <Users className="h-4 w-4 text-primary" />
+              <h3 className="text-sm font-semibold text-foreground">Aziende Clienti</h3>
+            </div>
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              Le imprese destinatarie dei servizi di sicurezza: anagrafica completa, dipendenti, attrezzature, scadenze, formazione, visite mediche e documentazione sempre aggiornata.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground border-t border-border pt-4">
+          <span><strong className="text-foreground">13</strong> moduli ERP & SGSL</span>
+          <span><strong className="text-foreground">8</strong> funzionalità CFT</span>
+          <span><strong className="text-foreground">4</strong> livelli di accesso</span>
+          <span><strong className="text-foreground">Multi-tenant</strong> SaaS</span>
+          <span><strong className="text-foreground">D.Lgs. 81/08</strong> compliant</span>
+        </div>
+      </div>
+
       <Tabs defaultValue="erp" className="space-y-6">
         <TabsList>
           <TabsTrigger value="erp" className="gap-2">

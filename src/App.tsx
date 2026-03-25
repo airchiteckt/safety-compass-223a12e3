@@ -18,6 +18,8 @@ import DocumentiPage from "./pages/DocumentiPage";
 import CRMPage from "./pages/CRMPage";
 import AmbientePage from "./pages/AmbientePage";
 import ReportPage from "./pages/ReportPage";
+import CFTDashboard from "./pages/CFTDashboard";
+import CFTAffiliatoDettaglio from "./pages/CFTAffiliatoDettaglio";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +46,9 @@ const App = () => (
           <Route path="/ambiente" element={<AmbientePage />} />
           <Route path="/crm" element={<CRMPage />} />
           <Route path="/report" element={<ReportPage />} />
+          <Route path="/cft" element={<CFTDashboard />} />
+          <Route path="/cft/affiliati" element={<CFTDashboard />} />
+          <Route path="/cft/affiliati/:id" element={<CFTAffiliatoDettaglio />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

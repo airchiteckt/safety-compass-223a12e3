@@ -92,11 +92,16 @@ export function AppSidebar() {
   return (
     <aside className="fixed left-0 top-0 z-40 flex h-screen w-64 flex-col bg-sidebar text-sidebar-foreground">
       {/* Logo */}
-      <div className="flex h-16 items-center gap-3 border-b border-sidebar-border px-6">
-        <Shield className="h-7 w-7 text-sidebar-primary" />
-        <span className="font-display text-lg font-bold text-sidebar-primary-foreground">
-          Pegaso ERP
-        </span>
+      <div className="flex items-center gap-3 border-b border-sidebar-border px-6 py-4">
+        <Shield className="h-8 w-8 text-sidebar-primary" />
+        <div className="flex flex-col">
+          <span className="font-display text-base font-bold text-sidebar-primary-foreground leading-tight">
+            Pegaso ERP & SGSL
+          </span>
+          <span className="text-[10px] text-sidebar-muted leading-tight">
+            Sistema Digitale Sicurezza Lavoro
+          </span>
+        </div>
       </div>
 
       {/* Navigation */}
@@ -145,7 +150,7 @@ export function AppSidebar() {
 
       {/* Footer */}
       <div className="border-t border-sidebar-border px-6 py-4">
-        <p className="text-xs text-sidebar-muted">Admin Pegaso</p>
+        <p className="text-xs text-sidebar-muted">Admin Pegaso ERP & SGSL</p>
         <p className="text-xs text-sidebar-muted">v1.0.0</p>
       </div>
     </aside>

@@ -17,6 +17,7 @@ import {
   Leaf,
   BarChart3,
   Globe,
+  BookOpen,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -78,6 +79,12 @@ const navGroups: NavGroup[] = [
     title: "Commerciale",
     items: [
       { label: "CRM", href: "/crm", icon: Briefcase },
+    ],
+  },
+  {
+    title: "Info",
+    items: [
+      { label: "Funzionalità", href: "/funzionalita", icon: BookOpen },
     ],
   },
 ];

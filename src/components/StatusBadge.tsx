@@ -23,10 +23,11 @@ const statusConfig: Record<Status, { label: string; icon: typeof CheckCircle; cl
 
 interface StatusBadgeProps {
   status: Status;
+  label?: string;
   className?: string;
 }
 
-export function StatusBadge({ status, className }: StatusBadgeProps) {
+export function StatusBadge({ status, label, className }: StatusBadgeProps) {
   const config = statusConfig[status];
   const Icon = config.icon;
 
@@ -39,7 +40,7 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
       )}
     >
       <Icon className="h-3.5 w-3.5" />
-      {config.label}
+      {label || config.label}
     </span>
   );
 }

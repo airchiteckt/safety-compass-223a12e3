@@ -2,20 +2,11 @@ import { cn } from "@/lib/utils";
 import { useLocation, Link } from "react-router-dom";
 import {
   LayoutDashboard,
-  Building2,
+  Building,
   Users,
-  Wrench,
-  CalendarClock,
-  GraduationCap,
-  Stethoscope,
-  FileText,
-  ClipboardCheck,
-  Calendar,
-  Briefcase,
-  Shield,
+  CreditCard,
+  Settings,
   ChevronDown,
-  Leaf,
-  BarChart3,
   Globe,
 } from "lucide-react";
 import { useState } from "react";
@@ -35,54 +26,26 @@ const navGroups: NavGroup[] = [
   {
     title: "Generale",
     items: [
-      { label: "Dashboard", href: "/", icon: LayoutDashboard },
-      { label: "Calendario", href: "/calendario", icon: Calendar },
+      { label: "Dashboard CFT", href: "/cft", icon: LayoutDashboard },
     ],
   },
   {
-    title: "Anagrafiche",
+    title: "Gestione",
     items: [
-      { label: "Aziende", href: "/aziende", icon: Building2 },
-      { label: "Dipendenti", href: "/dipendenti", icon: Users },
-      { label: "Attrezzature", href: "/attrezzature", icon: Wrench },
+      { label: "Affiliati", href: "/cft/affiliati", icon: Building },
+      { label: "Utenti", href: "/cft/utenti", icon: Users },
+      { label: "Abbonamenti", href: "/cft/abbonamenti", icon: CreditCard },
     ],
   },
   {
-    title: "Scadenze",
+    title: "Sistema",
     items: [
-      { label: "Tutte le Scadenze", href: "/scadenze", icon: CalendarClock },
-      { label: "Formazione", href: "/formazione", icon: GraduationCap },
-      { label: "Visite Mediche", href: "/visite-mediche", icon: Stethoscope },
-      { label: "Verifiche Impianti", href: "/verifiche", icon: ClipboardCheck },
-    ],
-  },
-  {
-    title: "Ambiente",
-    items: [
-      { label: "Sicurezza Ambientale", href: "/ambiente", icon: Leaf },
-    ],
-  },
-  {
-    title: "Documenti",
-    items: [
-      { label: "Archivio", href: "/documenti", icon: FileText },
-    ],
-  },
-  {
-    title: "Report",
-    items: [
-      { label: "Report & Export", href: "/report", icon: BarChart3 },
-    ],
-  },
-  {
-    title: "Commerciale",
-    items: [
-      { label: "CRM", href: "/crm", icon: Briefcase },
+      { label: "Impostazioni", href: "/cft/impostazioni", icon: Settings },
     ],
   },
 ];
 
-export function AppSidebar() {
+export function CFTSidebar() {
   const location = useLocation();
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
 
@@ -94,13 +57,13 @@ export function AppSidebar() {
     <aside className="fixed left-0 top-0 z-40 flex h-screen w-64 flex-col bg-sidebar text-sidebar-foreground">
       {/* Logo */}
       <div className="flex items-center gap-3 border-b border-sidebar-border px-6 py-4">
-        <Shield className="h-8 w-8 text-sidebar-primary" />
+        <Globe className="h-8 w-8 text-sidebar-primary" />
         <div className="flex flex-col">
           <span className="font-display text-base font-bold text-sidebar-primary-foreground leading-tight">
-            Pegaso ERP & SGSL
+            CFT Platform
           </span>
           <span className="text-[10px] text-sidebar-muted leading-tight">
-            Sistema Digitale Sicurezza Lavoro
+            Centro Federato Tecnico
           </span>
         </div>
       </div>
@@ -149,20 +112,20 @@ export function AppSidebar() {
         ))}
       </nav>
 
-      {/* CFT Link */}
+      {/* ERP Link */}
       <div className="border-t border-sidebar-border px-4 py-3">
         <Link
-          to="/cft"
+          to="/"
           className="flex items-center gap-2 rounded-md px-3 py-2 text-xs font-medium text-sidebar-muted hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors"
         >
-          <Globe className="h-3.5 w-3.5" />
-          Pannello CFT
+          <LayoutDashboard className="h-3.5 w-3.5" />
+          Vai a ERP & SGSL
         </Link>
       </div>
 
       {/* Footer */}
       <div className="border-t border-sidebar-border px-6 py-4">
-        <p className="text-xs text-sidebar-muted">Admin Pegaso ERP & SGSL</p>
+        <p className="text-xs text-sidebar-muted">Super Admin CFT</p>
         <p className="text-xs text-sidebar-muted">v1.0.0</p>
       </div>
     </aside>
